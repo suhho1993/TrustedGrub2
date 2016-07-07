@@ -1,0 +1,1 @@
+kern/i386/kernel_exec-int.o: kern/i386/int.S

@@ -1,0 +1,7 @@
+COMMAND_LIST_MARKER(const char *name, grub_command_func_t func, const char *summary, const char *description)
+P1COMMAND_LIST_MARKER(const char *name, grub_command_func_t func, const char *summary, const char *description)
+grub_extcmd_t EXTCOMMAND_LIST_MARKER(const char *name, grub_extcmd_func_t func, grub_command_flags_t flags, const char *summary, const char *description, const struct grub_arg_option *parser)
+ cmd_readpcr = COMMAND_LIST_MARKER("readpcr", grub_cmd_readpcr, "pcrindex", "Display current value of the PCR (Platform Configuration Register) within " "TPM (Trusted Platform Module) at index, pcrindex.")
+ cmd_tcglog = COMMAND_LIST_MARKER("tcglog", grub_cmd_tcglog, "logindex", "Displays TCG event log entry at position, logindex. Type in 0 for all entries.")
+ cmd_measure = COMMAND_LIST_MARKER("measure", grub_cmd_measure, "FILE pcrindex", "Perform TCG measurement operation with the file FILE and with PCR( pcrindex ).")
+ cmd_setMOR = COMMAND_LIST_MARKER("setmor", grub_cmd_setMOR, "disableAutoDetect", "Sets Memory Overwrite Request Bit with auto detect enabled (0) or disabled (1)")
